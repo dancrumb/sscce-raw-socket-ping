@@ -1,0 +1,14 @@
+{
+  "name": "sscce-raw-socket-ping",
+  "version": "1.0.0",
+  "description": "An SSCCE for Issue #60 in node-raw-socket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "raw-socket": "^1.7.0"
+  }
+}
