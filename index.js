@@ -15,11 +15,9 @@ function onMessage(message) {
   console.log(`  Version: ${ipVersion}`);
   console.log(`   Length: ${totalLength} (should be ~60)`);
   console.log(` Checksum: ${hChecksum.toString("hex")}`);
-  const calculatedChecksum = raw.createChecksum(ip);
+  const calculatedChecksum = raw.createChecksum(ip).toString(16);
   console.log(
-    ` Checked: ${calculatedChecksum.toString(
-      16
-    )} (should be 0 for valid checksum)`
+    `  Checked: ${calculatedChecksum} (should be 0 for valid checksum)`
   );
 
   const icmp = message.subarray(0x15);
@@ -29,5 +27,4 @@ function onMessage(message) {
 
 console.log("Sending...");
 ping("8.8.8.8", onMessage);
-ping("127.0.0.1", onMessage);
 console.log(`.........................\n`);
