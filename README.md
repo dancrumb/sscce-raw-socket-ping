@@ -2,6 +2,13 @@
 
 This is a Short, Self-Contained Correct Example for https://github.com/nospaceships/node-raw-socket/issues/60
 
+To run it, simply do:
+
+```
+npm install
+node run index.js
+```
+
 When run locally, I get the following output:
 
 ```
